@@ -1,20 +1,20 @@
-// Global variables
-const burgers = ['Hamburger', 'Cheeseburger'];
-let featuredDrink = 'Strawberry Milkshake';
+// Check global variables
+console.log(burgers); 
+// Expected: ['Hamburger', 'Cheeseburger', 'Flatburger', 'Maple Bacon Burger']
 
-// Function addBurger
-function addBurger() {
-  const newBurger = 'Flatburger';
-  burgers.push(newBurger);
-}
+console.log(featuredDrink); 
+// Expected: 'Strawberry Milkshake'
 
-// if statement
-if (true) {
-  const anotherNewBurger = 'Maple Bacon Burger';
-  burgers.push(anotherNewBurger);
-}
+// Test addBurger function
+addBurger();
+console.log(burgers); 
+// Should now include another 'Flatburger'
 
-// Function changeFeaturedDrink
-function changeFeaturedDrink() {
-  featuredDrink = 'The JavaShake';
-}
+// Test changeFeaturedDrink function
+changeFeaturedDrink();
+console.log(featuredDrink); 
+// Expected: 'The JavaShake'
+
+// Verify block scope - this will cause ReferenceError:
+console.log(anotherNewBurger); // ❌ Not accessible outside if block
+console.log(newBurger);        // ❌ Not accessible outside addBurger function
