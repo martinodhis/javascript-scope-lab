@@ -51,7 +51,3 @@ console.log(burgers);           // ['Hamburger', 'Cheeseburger', 'Maple Bacon Bu
 
 changeFeaturedDrink();
 console.log(featuredDrink);     // 'The JavaShake'
-
-// Verify scope - these should throw ReferenceError
-console.log(newBurger);         // ReferenceError: newBurger is not defined
-console.log(anotherNewBurger);  // ReferenceError: anotherNewBurger is not defined
