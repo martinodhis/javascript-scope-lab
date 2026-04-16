@@ -28,7 +28,7 @@ function addBurger() {
 // ============================================
 
 // if statement with condition true (Block Scope)
-if (true) {
+if(true) {
     // Creates a block-scoped variable named anotherNewBurger using const
     const anotherNewBurger = 'Maple Bacon Burger';
     
