@@ -41,3 +41,17 @@ function changeFeaturedDrink() {
     // Changes the value of the featuredDrink variable to 'The JavaShake'
     featuredDrink = 'The JavaShake';
 }
+// Check initial values
+console.log(burgers);           // ['Hamburger', 'Cheeseburger', 'Maple Bacon Burger']
+console.log(featuredDrink);     // 'Strawberry Milkshake'
+
+// Call the functions
+addBurger();
+console.log(burgers);           // ['Hamburger', 'Cheeseburger', 'Maple Bacon Burger', 'Flatburger']
+
+changeFeaturedDrink();
+console.log(featuredDrink);     // 'The JavaShake'
+
+// Verify scope - these should throw ReferenceError
+console.log(newBurger);         // ReferenceError: newBurger is not defined
+console.log(anotherNewBurger);  // ReferenceError: anotherNewBurger is not defined
