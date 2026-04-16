@@ -1,20 +1,43 @@
-// Check global variables
-console.log(burgers); 
-// Expected: ['Hamburger', 'Cheeseburger', 'Flatburger', 'Maple Bacon Burger']
+// ============================================
+// Step 1: Variable Data (Global Scope)
+// ============================================
 
-console.log(featuredDrink); 
-// Expected: 'Strawberry Milkshake'
+// Declare burgers in global scope using const
+const burgers = ['Hamburger', 'Cheeseburger'];
 
-// Test addBurger function
-addBurger();
-console.log(burgers); 
-// Should now include another 'Flatburger'
+// Declare featuredDrink in global scope using let
+let featuredDrink = 'Strawberry Milkshake';
 
-// Test changeFeaturedDrink function
-changeFeaturedDrink();
-console.log(featuredDrink); 
-// Expected: 'The JavaShake'
 
-// Verify block scope - this will cause ReferenceError:
-console.log(anotherNewBurger); // ❌ Not accessible outside if block
-console.log(newBurger);        // ❌ Not accessible outside addBurger function
+// ============================================
+// Step 2: Function and Block (Function Scope)
+// ============================================
+
+// Write a function named addBurger
+function addBurger() {
+    // Creates a function-scoped variable named newBurger using const
+    const newBurger = 'Flatburger';
+    
+    // Uses the .push() array method to add newBurger to the burgers array
+    burgers.push(newBurger);
+}
+
+
+// ============================================
+// Step 3: Variable Declaration and Scope
+// ============================================
+
+// if statement with condition true (Block Scope)
+if (true) {
+    // Creates a block-scoped variable named anotherNewBurger using const
+    const anotherNewBurger = 'Maple Bacon Burger';
+    
+    // Uses the .push() array method to add anotherNewBurger to the burgers array
+    burgers.push(anotherNewBurger);
+}
+
+// Write a function named changeFeaturedDrink
+function changeFeaturedDrink() {
+    // Changes the value of the featuredDrink variable to 'The JavaShake'
+    featuredDrink = 'The JavaShake';
+}
